@@ -1,0 +1,43 @@
+nav {
+	background-color: var(--darkened-bg);
+	overflow: hidden;
+    height: 80px;
+}
+
+nav a {
+	float: left;
+	display: block;
+	color: var(--dark);
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.content {
+	padding: 20px;
+}
+
+.href {
+    color: var(--secondary);
+}
+
+h1 {
+	text-align: center;
+	margin-top: 0;
+}
+
+.button {
+	background-color: var(--primary);
+	border-color: var(--primary)
+}
+
+footer {
+	background-color: var(--darkened-bg);
+	color: var(--dark);
+	padding: 10px;
+	text-align: center;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}

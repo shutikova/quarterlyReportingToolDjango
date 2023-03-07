@@ -1,10 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+	<title>Generate quarterly report</title>
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
+
+	<!-- Navbar -->
+	<nav>
+		<a class="navbar-brand" style="float: left; position: absolute">
+                <img src="Red_Hat_logo.png"
+                     height="70"
+                     alt="Red Hat Logo"
+                     loading="lazy"
+                     class="d-inline-block align-top"
+                     style="margin-right: 50px"
+                />
+        </a>
+        <h1 style="text-align:center; position: relative; margin-top: 15px">Generate quarterly report</h1>
+	</nav>
+
+	<!-- Content -->
+	<div class="content">
+		<form>
+            <h4 style="margin-bottom: 20px">Planned FTE values for following categories:</h4>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="wp">Work Packages:</label>
+                        <input type="number" class="form-control" id="wp" name="wp" placeholder="Enter planned FTE for WP">
+                    </div>
+                    <div class="form-group">
+                        <label for="relop">Planned Release Operations:</label>
+                        <input type="number" class="form-control" id="relop" name="relop" placeholder="Enter planned FTE for Planned Release Operations">
+                    </div>
+                    <div class="form-group">
+                        <label for="maint">Tooling Maintenance:</label>
+                        <input type="number" class="form-control" id="maint" name="maint" placeholder="Enter planned FTE for Tooling Maintenance">
+                    </div>
+                    <div class="form-group">
+                        <label for="stand">Standalone Items:</label>
+                        <input type="number" class="form-control" id="stand" name="stand" placeholder="Enter planned FTE for Standalone Items">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="up">Upstream Work:</label>
+                        <input type="number" class="form-control" id="up" name="up" placeholder="Enter planned FTE for Upstream Work">
+                    </div>
+                    <div class="form-group">
+                        <label for="sup">Support:</label>
+                        <input type="number" class="form-control" id="sup" name="sup" placeholder="Enter planned FTE for Support">
+                    </div>
+                    <div class="form-group">
+                        <label for="other">Other programs:</label>
+                        <input type="number" class="form-control" id="other" name="other" placeholder="Enter planned FTE for Other programs">
+                    </div>
+                </div>
+            </div>
+            <h4 style="margin-bottom: 20px; margin-top: 20px">Team and quarter:</h4>
+            <div class="row">
+                <div class="form-group col">
+                    <label for="team">Team:</label>
+                    <select class="form-control" id="team" name="team">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                    </select>
+                </div>
+                <div class="form-group col">
+                    <label for="quarter">Quarter:</label>
+                    <select class="form-control" id="quarter" name="quarter">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                    </select>
+                </div>
+            </div>
+			<button type="submit" class="btn btn-primary button" id="generate">Calculate</button>
+			<button type="reset" class="btn btn-secondary">Reset</button>
+		</form>
+	</div>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container align-items-center" style="display: inline-block; align-self: center; height: 80px">
+            <div class="row">
+              <div class="col-md-6">
+                <p>&copy; 2023 RHELCMP team</p>
+              </div>
+              <div class="col-md-5">
+                <ul class="list-unstyled">
+                  <li><a href="#" style="color: var(--primary)">How to use the tool</a></li>
+                  <li><a href="#" style="color: var(--primary)">Example of generated report</a></li>
+                  <li><a href="#" style="color: var(--primary)">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+	</footer>
 
 </body>
 </html>

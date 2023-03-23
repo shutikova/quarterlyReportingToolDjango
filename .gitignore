@@ -1,3 +1,7 @@
 /resources/
 /venv/
 /quarterlyReportingTool/migrations/
+.idea/dataSources.xml
+.idea/dataSources.xml
+.idea/jsLibraryMappings.xml
+.idea/quarterlyReportingToolDjango.iml
